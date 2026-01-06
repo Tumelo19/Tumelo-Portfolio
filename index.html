@@ -120,18 +120,21 @@ body {
   box-shadow: 0 0 20px #8b5cf6, 0 15px 35px rgba(0,0,0,0.5);
 }
 
+/* CENTER CARD */
 .center-card {
   text-align: center;
+  transition: transform 0.2s ease;
 }
 
-/* MIDDLE CARD IMAGE DECREASED 20% */
+/* PROFILE IMAGE IN CENTER CARD */
 .profile-img {
-  width: 224px;   /* 20% smaller than 280px */
-  height: 224px;  /* 20% smaller than 280px */
+  width: 224px;   /* 20% smaller than previous 280px */
+  height: 224px;
   border-radius: 50%;
   margin: 0 auto 18px;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  border: 3px solid transparent; /* will glow on hover */
+  transition: transform 0.3s ease, border 0.3s ease;
 }
 
 .profile-img img {
@@ -140,9 +143,10 @@ body {
   object-fit: cover;
 }
 
-/* ADD HOVER EFFECT TO IMAGE LIKE CARD */
+/* HOVER IMAGE TO MATCH CARD */
 .center-card:hover .profile-img {
   transform: scale(1.05);
+  border: 3px solid #8b5cf6;
 }
 
 h1 { margin: 8px 0 4px; font-size: 26px; }
