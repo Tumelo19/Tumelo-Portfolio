@@ -90,7 +90,7 @@ body {
 /* GRID WITH CENTER CARD 20% SKINNIER */
 .grid {
   display: grid;
-  grid-template-columns: 1fr 0.84fr 1fr; /* middle card decreased by ~20% */
+  grid-template-columns: 1fr 0.84fr 1fr;
   gap: 24px;
 }
 
@@ -124,19 +124,25 @@ body {
   text-align: center;
 }
 
-/* MIDDLE CARD IMAGE DOUBLED IN SIZE */
+/* MIDDLE CARD IMAGE DECREASED 20% */
 .profile-img {
-  width: 280px;   /* doubled from 140px */
-  height: 280px;  /* doubled from 140px */
+  width: 224px;   /* 20% smaller than 280px */
+  height: 224px;  /* 20% smaller than 280px */
   border-radius: 50%;
   margin: 0 auto 18px;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .profile-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* ADD HOVER EFFECT TO IMAGE LIKE CARD */
+.center-card:hover .profile-img {
+  transform: scale(1.05);
 }
 
 h1 { margin: 8px 0 4px; font-size: 26px; }
@@ -267,6 +273,7 @@ h2 { margin: 0 0 8px; font-size: 18px; color: #93c5fd; }
 
 </body>
 </html>
+
 
 
 
