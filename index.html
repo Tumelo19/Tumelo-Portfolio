@@ -46,12 +46,13 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: radial-gradient(circle at top, #6366f1, #312e81);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  color: #e0e7ff;
+  overflow: hidden;
+}
+
+.nav-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* RIGHT NAV */
@@ -86,7 +87,7 @@ body {
   padding: 110px 20px 40px;
 }
 
-/* 🔹 GRID WITH CENTER CARD 20% SKINNIER */
+/* GRID WITH CENTER CARD 20% SKINNIER */
 .grid {
   display: grid;
   grid-template-columns: 1fr 0.84fr 1fr; /* middle card decreased by ~20% */
@@ -127,13 +128,14 @@ body {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: radial-gradient(circle at top, #6366f1, #312e81);
   margin: 0 auto 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #e0e7ff;
+  overflow: hidden;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 h1 { margin: 8px 0 4px; font-size: 26px; }
@@ -181,7 +183,9 @@ h2 { margin: 0 0 8px; font-size: 18px; color: #93c5fd; }
 <!-- NAVBAR -->
 <div class="navbar">
   <div class="nav-left">
-    <div class="nav-img">IMG</div>
+    <div class="nav-img">
+      <img src="My_IMG.jpg" alt="Profile">
+    </div>
     Tumelo Mphiwe
   </div>
 
@@ -222,7 +226,9 @@ h2 { margin: 0 0 8px; font-size: 18px; color: #93c5fd; }
 
     <!-- CENTER CARD -->
     <div class="card center-card">
-      <div class="profile-img">Image</div>
+      <div class="profile-img">
+        <img src="My_IMG.jpg" alt="Profile">
+      </div>
       <h1>Tumelo Mphiwe</h1>
       <p class="small">
         Data Analyst | Passionate about driving decisions with<br>
@@ -260,3 +266,5 @@ h2 { margin: 0 0 8px; font-size: 18px; color: #93c5fd; }
 
 </body>
 </html>
+
+
