@@ -18,7 +18,7 @@ body {
   color: white;
 }
 
-/* NAVBAR (SAME AS INDEX) */
+/* NAVBAR – SAME AS INDEX */
 .navbar {
   position: fixed;
   top: 0;
@@ -65,6 +65,7 @@ body {
 .nav-right a {
   color: #c7d2fe;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .nav-right a:hover {
@@ -90,14 +91,14 @@ h1 {
   margin-bottom: 40px;
 }
 
-/* CERT GRID */
+/* GRID */
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
 
-/* CERT CARD */
+/* CARD */
 .cert-card {
   display: flex;
   gap: 18px;
@@ -164,13 +165,14 @@ h1 {
   text-decoration: none;
   border-radius: 10px;
   font-size: 13px;
+  transition: background 0.2s ease;
 }
 
 .cert-btn:hover {
   background: #7c3aed;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media (max-width: 600px) {
   .cert-card {
     flex-direction: column;
@@ -215,7 +217,7 @@ h1 {
     <!-- EXCEL -->
     <div class="cert-card">
       <div class="cert-img">
-        <img src="excel.jpg" alt="Excel Certification">
+        <img src="excel.png" alt="Excel Certification">
       </div>
       <div class="cert-content">
         <div>
@@ -230,7 +232,7 @@ h1 {
     <!-- SQL -->
     <div class="cert-card">
       <div class="cert-img">
-        <img src="sql.jpg" alt="SQL Certification">
+        <img src="sql.png" alt="SQL Certification">
       </div>
       <div class="cert-content">
         <div>
@@ -245,7 +247,7 @@ h1 {
     <!-- POWER BI -->
     <div class="cert-card">
       <div class="cert-img">
-        <img src="powerbi.jpg" alt="Power BI Certification">
+        <img src="powerbi.png" alt="Power BI Certification">
       </div>
       <div class="cert-content">
         <div>
@@ -254,3 +256,27 @@ h1 {
           <div class="cert-status">✔ Completed</div>
         </div>
         <a href="#" class="cert-btn">View Certificate</a>
+      </div>
+    </div>
+
+    <!-- TABLEAU -->
+    <div class="cert-card">
+      <div class="cert-img">
+        <img src="tableau.png" alt="Tableau Certification">
+      </div>
+      <div class="cert-content">
+        <div>
+          <div class="cert-title">Tableau for Data Visualization</div>
+          <div class="cert-provider">Analyst Builder</div>
+          <div class="cert-status">✔ Completed</div>
+        </div>
+        <a href="#" class="cert-btn">View Certificate</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
+
