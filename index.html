@@ -67,6 +67,7 @@ body {
 .nav-right a {
   color: #c7d2fe;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .nav-right a:hover {
@@ -99,7 +100,7 @@ body {
   gap: 24px;
 }
 
-/* CARDS */
+/* GLASS CARDS */
 .card {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -116,7 +117,7 @@ body {
 .card:hover {
   transform: translateY(-4px);
   border: 2px solid #8b5cf6;
-  box-shadow: 0 0 20px #8b5cf6;
+  box-shadow: 0 0 20px #8b5cf6, 0 15px 35px rgba(0,0,0,0.5);
 }
 
 /* CENTER CARD */
@@ -141,16 +142,15 @@ body {
 }
 
 h1 { margin: 8px 0 4px; font-size: 26px; }
-h2 { margin-bottom: 8px; font-size: 18px; color: #93c5fd; }
+h2 { margin: 0 0 8px; font-size: 18px; color: #93c5fd; }
 .small { font-size: 13px; color: #c7d2fe; line-height: 1.5; }
 
-/* LINK STYLE (QUALIFICATIONS STYLE) */
+/* LINK */
 .card-link {
-  margin-top: 12px;
+  margin-top: 10px;
   font-size: 13px;
   color: #a78bfa;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .card-link:hover {
@@ -179,9 +179,11 @@ h2 { margin-bottom: 8px; font-size: 18px; color: #93c5fd; }
 .social-icons a {
   color: white;
   font-size: 20px;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .social-icons a:hover {
+  transform: translateY(-3px);
   color: #a78bfa;
 }
 
@@ -225,7 +227,6 @@ h2 { margin-bottom: 8px; font-size: 18px; color: #93c5fd; }
         <p class="small">
           I turn raw data into insights that drive business decisions.
         </p>
-        <a href="#about" class="card-link">Read my story →</a>
       </div>
 
       <div class="card" id="projects">
@@ -235,22 +236,18 @@ h2 { margin-bottom: 8px; font-size: 18px; color: #93c5fd; }
           • Power BI Sales Dashboard<br>
           • SQL Customer Segmentation
         </p>
-        <a href="#projects" class="card-link">See all projects →</a>
       </div>
 
-      <!-- QUALIFICATIONS / CERTIFICATIONS -->
       <div class="card">
         <h2>Certifications</h2>
-        <p class="small">
-          Excel • SQL • Power BI • Tableau
-        </p>
+        <p class="small">Excel • SQL • Power BI • Tableau</p>
         <a href="certifications.html" class="card-link">
           View certifications →
         </a>
       </div>
     </div>
 
-    <!-- CENTER -->
+    <!-- CENTER CARD -->
     <div class="card center-card">
       <div class="profile-img">
         <img src="My_IMG.jpg" alt="Profile">
@@ -264,22 +261,34 @@ h2 { margin-bottom: 8px; font-size: 18px; color: #93c5fd; }
       <a class="btn" href="#">Contact Me</a>
 
       <div class="social-icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/yourusername" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:youremail@example.com">
+          <i class="fas fa-envelope"></i>
+        </a>
       </div>
     </div>
 
     <!-- RIGHT COLUMN -->
     <div class="column">
       <div class="card" id="skills">
-        <h2>Core Skills</h2>
-        <p class="small">SQL • Python • Excel<br>Power BI • Tableau</p>
+        <h2>Skills</h2>
+        <p class="small">
+          SQL • Python • Excel<br>
+          Power BI • Tableau
+        </p>
       </div>
 
       <div class="card" id="education">
         <h2>Education</h2>
-        <p class="small">Diploma / Degree<br>Data Analytics Focus</p>
+        <p class="small">
+          Diploma / Degree<br>
+          Data Analytics Focus
+        </p>
       </div>
 
       <div class="card" id="resume">
@@ -294,5 +303,6 @@ h2 { margin-bottom: 8px; font-size: 18px; color: #93c5fd; }
 
 </body>
 </html>
+
 
 
