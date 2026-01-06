@@ -105,7 +105,7 @@ body {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   border-radius: 18px;
-  padding: 20px; /* slightly smaller padding */
+  padding: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.45);
   display: flex;
   flex-direction: column;
@@ -118,6 +118,21 @@ body {
   transform: translateY(-4px);
   border: 2px solid #8b5cf6;
   box-shadow: 0 0 20px #8b5cf6, 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* CARD LINK GLOW ON CARD HOVER */
+.card-link {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #a78bfa;
+  text-decoration: none;
+  transition: transform 0.2s ease, text-shadow 0.3s ease, color 0.2s ease;
+}
+
+.card:hover .card-link {
+  transform: scale(1.05);
+  color: #a78bfa;
+  text-shadow: 0 0 8px #a78bfa;
 }
 
 /* CENTER CARD */
@@ -147,20 +162,8 @@ h2 { margin: 0 0 6px; font-size: 18px; color: #93c5fd; }
 .small {
   font-size: 13px;
   color: #c7d2fe;
-  line-height: 1.3; /* reduced from 1.5 to 1.3 */
+  line-height: 1.3;
   margin: 0;
-}
-
-/* LINK */
-.card-link {
-  margin-top: 6px; /* smaller spacing */
-  font-size: 13px;
-  color: #a78bfa;
-  text-decoration: none;
-}
-
-.card-link:hover {
-  text-decoration: underline;
 }
 
 /* BUTTON */
@@ -311,3 +314,4 @@ h2 { margin: 0 0 6px; font-size: 18px; color: #93c5fd; }
 
 </body>
 </html>
+
