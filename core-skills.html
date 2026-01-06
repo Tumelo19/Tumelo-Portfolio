@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tumelo | Core Skills</title>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0b1020, #1a1446);
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.nav-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.nav-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 14px;
+}
+
+.nav-right a {
+  color: #c7d2fe;
+  text-decoration: none;
+}
+
+.nav-right a:hover {
+  color: #60a5fa;
+}
+
+/* PAGE CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 110px 20px 40px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #c7d2fe;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+.skill-card {
+  display: flex;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  border: 2px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border: 2px solid #8b5cf6;
+  box-shadow: 0 0 18px #8b5cf6;
+}
+
+/* ICON */
+.skill-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+/* CONTENT */
+.skill-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill-title {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.skill-desc {
+  font-size: 14px;
+  color: #c7d2fe;
+  line-height: 1.5;
+}
+
+.skill-points {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+.skill-points li {
+  margin-bottom: 6px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .skill-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <div class="nav-img">
+      <img src="My_IMG.jpg" alt="Profile">
+    </div>
+    Tumelo Mphiwe
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="skills.html">Core Skills</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#education">Education</a>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+  <h1>Core Skills</h1>
+  <p class="subtitle">Analyze • Clean • Explore • Visualize Data</p>
+
+  <div class="skills-grid">
+
+    <!-- EXCEL -->
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="excel.png" alt="Excel">
+      </div>
+      <div class="skill-content">
+        <div class="skill-title">Excel Data Analysis</div>
+        <div class="skill-desc">
+          Strong foundation in spreadsheet-based data analysis for business decision-making.
+        </div>
+        <ul class="skill-points">
+          <li>✔ Data cleaning and preparation</li>
+          <li>✔ Pivot tables and dashboards</li>
+          <li>✔ Advanced formulas & functions</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SQL -->
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="sql.png" alt="SQL">
+      </div>
+      <div class="skill-content">
+        <div class="skill-title">SQL for Data Analytics</div>
+        <div class="skill-desc">
+          Querying and transforming structured data to uncover insights.
+        </div>
+        <ul class="skill-points">
+          <li>✔ Data extraction using SELECT & WHERE</li>
+          <li>✔ Joins, subqueries & aggregations</li>
+          <li>✔ Window functions & regex</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- POWER BI -->
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="powerbi.png" alt="Power BI">
+      </div>
+      <div class="skill-content">
+        <div class="skill-title">Power BI & Business Intelligence</div>
+        <div class="skill-desc">
+          Building interactive dashboards that drive strategic decisions.
+        </div>
+        <ul class="skill-points">
+          <li>✔ Data modeling & relationships</li>
+          <li>✔ DAX measures and KPIs</li>
+          <li>✔ Interactive reports & visuals</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TABLEAU -->
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="tableau.png" alt="Tableau">
+      </div>
+      <div class="skill-content">
+        <div class="skill-title">Tableau Data Visualization</div>
+        <div class="skill-desc">
+          Transforming complex data into clear, impactful stories.
+        </div>
+        <ul class="skill-points">
+          <li>✔ Visual analytics & storytelling</li>
+          <li>✔ Calculated fields & filters</li>
+          <li>✔ Insight-driven dashboards</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
