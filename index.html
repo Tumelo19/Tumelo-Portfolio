@@ -111,7 +111,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   border: 2px solid transparent;
-  transition: transform 0.2s ease, box-shadow 0.3s ease, border 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
 .card:hover {
@@ -123,17 +123,17 @@ body {
 /* CENTER CARD */
 .center-card {
   text-align: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 /* PROFILE IMAGE IN CENTER CARD */
 .profile-img {
-  width: 224px;   /* 20% smaller than previous 280px */
+  width: 224px;   /* slightly smaller */
   height: 224px;
   border-radius: 50%;
   margin: 0 auto 18px;
   overflow: hidden;
-  border: 3px solid transparent; /* will glow on hover */
+  border: 3px solid transparent; /* default border */
   transition: transform 0.3s ease, border 0.3s ease;
 }
 
@@ -143,10 +143,14 @@ body {
   object-fit: cover;
 }
 
-/* HOVER IMAGE TO MATCH CARD */
+/* HOVER EFFECT: CARD AND IMAGE BORDER TOGETHER */
+.center-card:hover {
+  transform: scale(1.05); /* scale the card */
+}
+
 .center-card:hover .profile-img {
-  transform: scale(1.05);
-  border: 3px solid #8b5cf6;
+  border-color: #8b5cf6; /* purple border glow */
+  transform: scale(1.05); /* scale image with card */
 }
 
 h1 { margin: 8px 0 4px; font-size: 26px; }
@@ -277,7 +281,3 @@ h2 { margin: 0 0 8px; font-size: 18px; color: #93c5fd; }
 
 </body>
 </html>
-
-
-
-
