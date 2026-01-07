@@ -85,6 +85,7 @@
       padding: 110px 20px 40px;
     }
 
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: 1fr 0.84fr 1fr;
@@ -134,6 +135,7 @@
       text-decoration: none;
     }
 
+    /* CENTER CARD */
     .center-card {
       text-align: center;
     }
@@ -168,20 +170,29 @@
       color: white;
       text-decoration: none;
       font-size: 14px;
+      display: inline-block;
     }
 
+    /* SOCIAL ICONS */
     .social-icons {
       display: flex;
       justify-content: center;
       gap: 18px;
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
     .social-icons a {
       color: white;
       font-size: 20px;
+      transition: transform 0.2s ease, color 0.2s ease;
     }
 
+    .social-icons a:hover {
+      transform: translateY(-3px);
+      color: #a78bfa;
+    }
+
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .grid { grid-template-columns: 1fr; }
     }
@@ -190,97 +201,116 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="nav-left">
-      <div class="nav-img">
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <div class="nav-img">
+      <img src="My_IMG.jpg" alt="Profile">
+    </div>
+    Tumelo Mphiwe
+  </div>
+
+  <div class="nav-right">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="core-skills.html">Skills</a>
+    <a href="education.html">Education</a>
+    <a href="#resume">Resume</a>
+    <span class="settings">⚙️</span>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="grid">
+
+    <!-- LEFT COLUMN -->
+    <div class="column">
+      <div class="card" id="about">
+        <h2>About Me</h2>
+        <p class="small">I turn raw data into insights that drive business decisions.</p>
+        <a href="#" class="card-link">Read My Full Story →</a>
+      </div>
+
+      <div class="card" id="projects">
+        <h2>Projects</h2>
+        <p class="small">
+          • Revenue Driver Analysis<br>
+          • Power BI Sales Dashboard<br>
+          • SQL Customer Segmentation
+        </p>
+        <a href="#" class="card-link">See all my projects →</a>
+      </div>
+
+      <div class="card">
+        <h2>Certifications</h2>
+        <p class="small">Excel • SQL • Power BI • Tableau</p>
+        <a href="certifications.html" class="card-link">View certifications →</a>
+      </div>
+    </div>
+
+    <!-- CENTER -->
+    <div class="card center-card">
+      <div class="profile-img">
         <img src="My_IMG.jpg" alt="Profile">
       </div>
-      Tumelo Mphiwe
-    </div>
 
-    <div class="nav-right">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="certifications.html">Certifications</a>
-      <a href="core-skills.html">Skills</a>
-      <a href="education.html">Education</a>
-      <a href="#resume">Resume</a>
-      <span class="settings">⚙️</span>
-    </div>
-  </div>
+      <h1>Tumelo Mphiwe</h1>
 
-  <!-- CONTENT -->
-  <div class="container">
-    <div class="grid">
+      <p class="small">
+        Data Analyst | Passionate about driving decisions with<br>
+        Business Intelligence
+      </p>
 
-      <!-- LEFT COLUMN -->
-      <div class="column">
-        <div class="card" id="about">
-          <h2>About Me</h2>
-          <p class="small">I turn raw data into insights that drive business decisions.</p>
-          <a href="#" class="card-link">Read My Full Story →</a>
-        </div>
+      <a class="btn" href="#">Contact Me</a>
 
-        <div class="card" id="projects">
-          <h2>Projects</h2>
-          <p class="small">
-            • Revenue Driver Analysis<br>
-            • Power BI Sales Dashboard<br>
-            • SQL Customer Segmentation
-          </p>
-          <a href="#" class="card-link">See all my projects →</a>
-        </div>
-
-        <div class="card">
-          <h2>Certifications</h2>
-          <p class="small">Excel • SQL • Power BI • Tableau</p>
-          <a href="certifications.html" class="card-link">View certifications →</a>
-        </div>
+      <div class="social-icons">
+        <a href="https://github.com/yourusername" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:youremail@example.com">
+          <i class="fas fa-envelope"></i>
+        </a>
       </div>
+    </div>
 
-      <!-- CENTER -->
-      <div class="card center-card">
-        <div class="profile-img">
-          <img src="My_IMG.jpg" alt="Profile">
-        </div>
-        <h1>Tumelo Mphiwe</h1>
+    <!-- RIGHT COLUMN -->
+    <div class="column">
+      <div class="card">
+        <h2>Core Skills</h2>
         <p class="small">
-          Data Analyst | Passionate about driving decisions with<br>
-          Business Intelligence
+          SQL • Excel • Power BI<br>
+          Tableau • Data Analysis
         </p>
-        <a class="btn" href="#">Contact Me</a>
+        <a href="core-skills.html" class="card-link">See full skillsets →</a>
       </div>
 
-      <!-- RIGHT COLUMN -->
-      <div class="column">
-        <div class="card">
-          <h2>Core Skills</h2>
-          <p class="small">SQL • Excel • Power BI<br>Tableau • Data Analysis</p>
-          <a href="core-skills.html" class="card-link">See full skillsets →</a>
-        </div>
-
-        <div class="card">
-          <h2>Education</h2>
-          <p class="small">
-            Diploma – Central University of Technology<br>
-            NQF 4 IT & Computer Science – Tshwane South TVET College
-          </p>
-          <a href="education.html" class="card-link">View details →</a>
-        </div>
-
-        <div class="card" id="resume">
-          <h2>Resume</h2>
-          <p class="small">Download my professional resume</p>
-          <a href="#" class="card-link">View resume →</a>
-        </div>
+      <div class="card">
+        <h2>Education</h2>
+        <p class="small">
+          Diploma – Central University of Technology<br>
+          NQF 4 IT & Computer Science – Tshwane South TVET College
+        </p>
+        <a href="education.html" class="card-link">View details →</a>
       </div>
 
+      <div class="card" id="resume">
+        <h2>Resume</h2>
+        <p class="small">Download my professional resume</p>
+        <a href="#" class="card-link">View resume →</a>
+      </div>
     </div>
+
   </div>
+</div>
 
 </body>
 </html>
+
 
 
 
