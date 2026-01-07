@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tumelo | About Me</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0b1020, #1a1446);
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.nav-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.nav-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 14px;
+}
+
+.nav-right a {
+  color: #c7d2fe;
+  text-decoration: none;
+}
+
+.nav-right a:hover {
+  color: #60a5fa;
+}
+
+/* PAGE CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 110px 20px 40px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #c7d2fe;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+/* CARD */
+.about-card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  border: 2px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  border: 2px solid #8b5cf6;
+  box-shadow: 0 0 18px #8b5cf6;
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom: 28px;
+}
+
+.section-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: #8b5cf6;
+  margin: 6px 0 12px;
+  border-radius: 2px;
+}
+
+.section-text {
+  font-size: 14px;
+  color: #c7d2fe;
+  line-height: 1.6;
+}
+
+/* LIST */
+.section-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+.section-list li {
+  margin-bottom: 6px;
+}
+
+/* SKILLS TAGS */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 6px 14px;
+  background: rgba(59,130,246,0.9);
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+/* BUTTONS */
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 22px;
+  background: #3b82f6;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn.secondary {
+  background: rgba(255,255,255,0.18);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-left">
+    <div class="nav-img">
+      <img src="My_IMG.jpg" alt="Profile">
+    </div>
+    Tumelo Mphiwe
+  </div>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Core Skills</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#education">Education</a>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+  <h1>About Me</h1>
+  <p class="subtitle">Turning raw data into insights that drive decisions</p>
+
+  <div class="about-card">
+
+    <div class="section">
+      <div class="section-title">Who I Am</div>
+      <div class="section-divider"></div>
+      <p class="section-text">
+        I’m a Data Analyst with a strong foundation in Information Technology, focused on transforming raw data
+        into meaningful insights that support smarter business decisions.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">My Journey</div>
+      <div class="section-divider"></div>
+      <p class="section-text">
+        My journey into data analytics began through academic training and hands-on projects where I developed
+        analytical thinking, problem-solving skills, and a strong interest in working with data.
+        I enjoy exploring datasets, identifying patterns, and translating numbers into clear insights.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">What I Do</div>
+      <div class="section-divider"></div>
+      <ul class="section-list">
+        <li>✔ Analyze datasets to identify trends and performance drivers</li>
+        <li>✔ Clean and prepare data for analysis and reporting</li>
+        <li>✔ Build dashboards and reports using Power BI and Excel</li>
+        <li>✔ Use SQL to extract and transform structured data</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Tools & Skills</div>
+      <div class="section-divider"></div>
+      <div class="tags">
+        <span class="tag">SQL</span>
+        <span class="tag">Excel</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Business Intelligence</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Career Direction</div>
+      <div class="section-divider"></div>
+      <p class="section-text">
+        I’m seeking opportunities as a Data Analyst where I can contribute analytical value, grow my technical
+        expertise, and support organizations in making data-driven decisions.
+      </p>
+    </div>
+
+    <div class="actions">
+      <a href="index.html#projects" class="btn">View Projects</a>
+      <a href="#" class="btn secondary">Download Resume</a>
+      <a href="mailto:youremail@example.com" class="btn secondary">Contact Me</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
