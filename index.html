@@ -33,6 +33,7 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
+/* LEFT PROFILE */
 .nav-left {
   display: flex;
   align-items: center;
@@ -54,6 +55,7 @@ body {
   object-fit: cover;
 }
 
+/* RIGHT NAV */
 .nav-right {
   margin-left: auto;
   display: flex;
@@ -65,17 +67,149 @@ body {
 .nav-right a {
   color: #c7d2fe;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .nav-right a:hover {
   color: #60a5fa;
 }
 
-/* PAGE CONTAINER */
+.settings {
+  font-size: 18px;
+  cursor: pointer;
+  color: #c7d2fe;
+}
+
+/* MAIN CONTENT */
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 110px 20px 40px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 0.84fr 1fr;
+  gap: 24px;
+}
+
+.column {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* GLASS CARDS */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 16px; /* reduced */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border: 2px solid #8b5cf6;
+  box-shadow: 0 0 20px #8b5cf6, 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* HEADINGS SPACING */
+.card h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #93c5fd;
+}
+
+.card h1 {
+  margin: 4px 0;
+}
+
+/* CARD LINK */
+.card-link {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #a78bfa;
+  text-decoration: none;
+  transition: transform 0.2s ease, text-shadow 0.3s ease;
+}
+
+.card:hover .card-link {
+  transform: scale(1.05);
+  text-shadow: 0 0 8px #a78bfa;
+}
+
+/* CENTER CARD */
+.center-card {
+  text-align: center;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  overflow: hidden;
+  border: 4px solid #8b5cf6;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT */
+.small {
+  font-size: 13px;
+  color: #c7d2fe;
+  line-height: 1.15; /* tighter */
+  margin: 4px 0;     /* reduced spacing */
+}
+
+.card p br {
+  line-height: 1;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 10px;
+  padding: 10px 22px;
+  background: #6366f1;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* SOCIAL */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  color: #a78bfa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -92,23 +226,98 @@ body {
   </div>
 
   <div class="nav-right">
-    <a href="index.html">Home</a>
-    <a href="skills.html">Core Skills</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
     <a href="certifications.html">Certifications</a>
-    <a href="index.html#projects">Projects</a>
-
-    <!-- ✅ ONLY CHANGE IS HERE -->
-    <a href="education.html">Education</a>
+    <a href="core-skills.html">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#resume">Resume</a>
+    <span class="settings">⚙️</span>
   </div>
 </div>
 
-<!-- PAGE CONTENT (UNCHANGED) -->
+<!-- CONTENT -->
 <div class="container">
-  <!-- Your existing homepage content stays exactly the same -->
+  <div class="grid">
+
+    <!-- LEFT COLUMN -->
+    <div class="column">
+      <div class="card" id="about">
+        <h2>About Me</h2>
+        <p class="small">I turn raw data into insights that drive business decisions.</p>
+        <a href="#" class="card-link">Read My Full Story →</a>
+      </div>
+
+      <div class="card" id="projects">
+        <h2>Projects</h2>
+        <p class="small">
+          • Revenue Driver Analysis<br>
+          • Power BI Sales Dashboard<br>
+          • SQL Customer Segmentation
+        </p>
+        <a href="#" class="card-link">See all my projects →</a>
+      </div>
+
+      <div class="card">
+        <h2>Certifications</h2>
+        <p class="small">Excel • SQL • Power BI • Tableau</p>
+        <a href="certifications.html" class="card-link">View certifications →</a>
+      </div>
+    </div>
+
+    <!-- CENTER -->
+    <div class="card center-card">
+      <div class="profile-img">
+        <img src="My_IMG.jpg" alt="Profile">
+      </div>
+      <h1>Tumelo Mphiwe</h1>
+      <p class="small">
+        Data Analyst | Passionate about driving decisions with<br>
+        Business Intelligence
+      </p>
+
+      <a class="btn" href="#">Contact Me</a>
+
+      <div class="social-icons">
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="column">
+      <div class="card">
+        <h2>Core Skills</h2>
+        <p class="small">
+          SQL • Excel • Power BI<br>
+          Tableau • Data Analysis
+        </p>
+        <a href="core-skills.html" class="card-link">See full skillsets →</a>
+      </div>
+
+      <div class="card" id="education">
+        <h2>Education</h2>
+        <p class="small">
+          Diploma – Central University of Technology<br>
+          NQF 4 IT & Computer Science – Tshwane South TVET College
+        </p>
+        <a href="#" class="card-link">View details →</a>
+      </div>
+
+      <div class="card" id="resume">
+        <h2>Resume</h2>
+        <p class="small">Download my professional resume</p>
+        <a href="#" class="card-link">View resume →</a>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 </body>
 </html>
+
 
 
 
