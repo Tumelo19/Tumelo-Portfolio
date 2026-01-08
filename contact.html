@@ -1,185 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tumelo | Contact</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tumelo | Data Analyst</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at top, #1b1f3b, #070b24);
-  color: #fff;
-}
+  <style>
+    * { box-sizing: border-box; }
 
-/* CENTER PAGE */
-.contact-wrapper {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
-}
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #0b1020, #1a1446);
+      color: white;
+    }
 
-/* GRID */
-.contact-grid {
-  width: 100%;
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 25px;
-}
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 64px;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      padding: 0 28px;
+      z-index: 1000;
+    }
 
-/* CARDS */
-.card {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(14px);
-  border-radius: 18px;
-  padding: 22px; /* slightly reduced */
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-  transition: 0.3s ease;
-}
+    /* MAIN CONTENT */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 110px 20px 40px;
+    }
 
-.card:hover {
-  box-shadow: 0 0 20px rgba(138,43,226,0.7);
-}
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 0.84fr 1fr;
+      gap: 24px;
+    }
 
-/* LEFT STACK */
-.left-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* reduced gap */
-}
+    .column {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 24px;
+    }
 
-.left-stack .card {
-  flex: 1;
-}
+    /* CARDS */
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow: hidden; /* IMPORTANT */
+    }
 
-/* COMPACT TEXT CARD (Contact Info) */
-.card.compact p {
-  margin: 4px 0;
-  line-height: 1.3;
-}
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #ffffff;
+    }
 
-/* CENTER CARD */
-.contact-main {
-  text-align: center;
-}
+    .small {
+      font-size: 13px;
+      color: #c7d2fe;
+      margin: 4px 0;
+    }
 
-.contact-main h1 {
-  font-size: 30px;
-  margin-bottom: 6px;
-}
+    /* CONTACT ME CARD FIX */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 6px;
+    }
 
-.contact-main p {
-  font-size: 14px;
-  opacity: 0.85;
-  margin-bottom: 18px;
-}
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: none;
+      font-size: 13px;
+      font-family: inherit;
+      resize: none;
+    }
 
-/* FORM */
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  background: rgba(255,255,255,0.1);
-  border: none;
-  border-radius: 10px;
-  padding: 14px;
-  color: #fff;
-  margin-bottom: 12px;
-  font-size: 14px;
-}
+    .contact-form textarea {
+      height: 70px; /* controlled height */
+    }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #bbb;
-}
+    .contact-form button {
+      margin-top: 6px;
+      padding: 8px;
+      border-radius: 10px;
+      border: none;
+      background: #6366f1;
+      color: white;
+      font-size: 13px;
+      cursor: pointer;
+    }
 
-.contact-form button {
-  width: 100%;
-  padding: 14px;
-  border-radius: 12px;
-  border: none;
-  background: #6c63ff;
-  color: #fff;
-  font-size: 15px;
-  cursor: pointer;
-}
+    /* CENTER CARD */
+    .center-card {
+      text-align: center;
+    }
 
-.contact-form button:hover {
-  background: #584cff;
-}
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      overflow: hidden;
+      border: 4px solid #8b5cf6;
+    }
 
-/* TEXT */
-.card h3 {
-  margin-bottom: 8px;
-}
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.card p {
-  font-size: 14px;
-  opacity: 0.85;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .left-stack .card {
-    flex: unset;
-  }
-}
-</style>
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="contact-wrapper">
-  <div class="contact-grid">
+<div class="container">
+  <div class="grid">
 
     <!-- LEFT COLUMN -->
-    <div class="left-stack">
+    <div class="column">
 
+      <!-- CONTACT ME CARD -->
       <div class="card">
-        <h3>Message Me</h3>
-        <p>
-          Got a project idea, collaboration, or role in mind?
-          I’m always open to discussing data, analytics, and insights.
-        </p>
+        <h2>Contact Me</h2>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your Email">
+          <textarea placeholder="Your Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
       </div>
 
       <div class="card">
-        <h3>Availability</h3>
-        <p>
-          Open to graduate analyst roles, internships, freelance dashboards,
-          and Power BI / SQL projects.
-        </p>
+        <h2>Projects</h2>
+        <p class="small">Power BI • SQL • Excel</p>
       </div>
 
-      <!-- COMPACT CARD -->
-      <div class="card compact">
-        <h3>Contact Info</h3>
-        <p>Email: tumelomphiwe@gmail.com</p>
-        <p>Location: South Africa</p>
+      <div class="card">
+        <h2>Certifications</h2>
+        <p class="small">Excel • SQL • Power BI • Tableau</p>
       </div>
 
     </div>
 
-    <!-- CENTER BIG CARD -->
-    <div class="card contact-main">
-      <h1>Contact Me</h1>
-      <p>Let’s turn data into decisions</p>
+    <!-- CENTER -->
+    <div class="card center-card">
+      <div class="profile-img">
+        <img src="My_IMG.jpg" alt="Profile">
+      </div>
+      <h1>Tumelo Mphiwe</h1>
+      <p class="small">Data Analyst | Business Intelligence</p>
+    </div>
 
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="4" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+    <!-- RIGHT COLUMN -->
+    <div class="column">
+      <div class="card">
+        <h2>Skills</h2>
+        <p class="small">SQL • Excel • Power BI • Tableau</p>
+      </div>
+
+      <div class="card">
+        <h2>Education</h2>
+        <p class="small">Diploma – Central University of Technology</p>
+      </div>
+
+      <div class="card">
+        <h2>Resume</h2>
+        <p class="small">View professional resume</p>
+      </div>
     </div>
 
   </div>
@@ -187,4 +202,5 @@ body {
 
 </body>
 </html>
+
 
