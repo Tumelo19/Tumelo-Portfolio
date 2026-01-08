@@ -15,7 +15,7 @@ body {
   color: #fff;
 }
 
-/* ===== CONTAINER ===== */
+/* CENTER PAGE */
 .contact-wrapper {
   min-height: 100vh;
   display: flex;
@@ -24,16 +24,16 @@ body {
   padding: 60px 20px;
 }
 
-/* ===== GRID ===== */
+/* GRID */
 .contact-grid {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1000px;
   display: grid;
-  grid-template-columns: 1fr 1.3fr 1fr;
+  grid-template-columns: 1fr 1.4fr;
   gap: 25px;
 }
 
-/* ===== CARD ===== */
+/* CARDS */
 .card {
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(14px);
@@ -47,14 +47,19 @@ body {
   box-shadow: 0 0 20px rgba(138,43,226,0.7);
 }
 
-/* ===== LEFT & RIGHT STACKS ===== */
-.stack {
+/* LEFT STACK */
+.left-stack {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-/* ===== CENTER CARD ===== */
+/* MAKE LEFT CARDS SHARE HEIGHT */
+.left-stack .card {
+  flex: 1;
+}
+
+/* CENTER CARD */
 .contact-main {
   text-align: center;
 }
@@ -70,7 +75,7 @@ body {
   margin-bottom: 22px;
 }
 
-/* ===== FORM ===== */
+/* FORM */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -103,7 +108,7 @@ body {
   background: #584cff;
 }
 
-/* ===== TEXT ===== */
+/* TEXT */
 .card h3 {
   margin-bottom: 10px;
 }
@@ -113,23 +118,14 @@ body {
   opacity: 0.85;
 }
 
-/* ===== SOCIALS ===== */
-.social-icons a {
-  margin-right: 12px;
-  font-size: 18px;
-  color: #fff;
-  opacity: 0.8;
-}
-
-.social-icons a:hover {
-  opacity: 1;
-  color: #6c63ff;
-}
-
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .left-stack .card {
+    flex: unset;
   }
 }
 </style>
@@ -138,11 +134,10 @@ body {
 <body>
 
 <div class="contact-wrapper">
-
   <div class="contact-grid">
 
-    <!-- LEFT COLUMN -->
-    <div class="stack">
+    <!-- LEFT COLUMN (3 SMALL CARDS) -->
+    <div class="left-stack">
       <div class="card">
         <h3>Message Me</h3>
         <p>
@@ -158,9 +153,15 @@ body {
           and Power BI / SQL projects.
         </p>
       </div>
+
+      <div class="card">
+        <h3>Contact Info</h3>
+        <p>Email: tumelomphiwe@gmail.com</p>
+        <p>Location: South Africa</p>
+      </div>
     </div>
 
-    <!-- CENTER -->
+    <!-- CENTER BIG CARD -->
     <div class="card contact-main">
       <h1>Contact Me</h1>
       <p>Let’s turn data into decisions</p>
@@ -171,24 +172,6 @@ body {
         <textarea rows="4" placeholder="Your Message"></textarea>
         <button type="submit">Send Message</button>
       </form>
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="stack">
-      <div class="card">
-        <h3>Contact Info</h3>
-        <p>Email: tumelomphiwe@gmail.com</p>
-        <p>Location: South Africa</p>
-      </div>
-
-      <div class="card">
-        <h3>Connect</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
     </div>
 
   </div>
