@@ -23,12 +23,13 @@
       position: fixed;
       top: 0;
       width: 100%;
-      height: 64px;
       background: rgba(15, 23, 42, 0.95);
       backdrop-filter: blur(10px);
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      padding: 0 28px;
+      padding: 0 20px;
+      height: 64px;
       z-index: 1000;
       box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
@@ -55,10 +56,9 @@
     }
 
     .nav-right {
-      margin-left: auto;
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 18px;
       font-size: 14px;
     }
 
@@ -70,6 +70,36 @@
 
     .nav-right a:hover {
       color: #60a5fa;
+    }
+
+    /* HAMBURGER MENU */
+    .hamburger {
+      display: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        position: fixed;
+        top: 64px;
+        right: -100%;
+        flex-direction: column;
+        background: rgba(15, 23, 42, 0.95);
+        width: 200px;
+        height: calc(100% - 64px);
+        padding-top: 20px;
+        gap: 15px;
+        transition: right 0.3s ease;
+      }
+
+      .nav-right.active {
+        right: 0;
+      }
+
+      .hamburger {
+        display: block;
+      }
     }
 
     /* MAIN CONTENT */
@@ -196,7 +226,11 @@
     Tumelo Mphiwe
   </div>
 
-  <div class="nav-right">
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div class="nav-right" id="nav-menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="core-skills.html">Core Skills</a>
@@ -286,6 +320,12 @@
 
   </div>
 </div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('nav-menu').classList.toggle('active');
+  }
+</script>
 
 </body>
 </html>
