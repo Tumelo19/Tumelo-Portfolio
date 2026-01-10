@@ -1,188 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tumelo | Data Analyst</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tumelo | About Me</title>
 
-  <!-- FONT AWESOME ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <style>
-    * { box-sizing: border-box; }
+<style>
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(135deg, #0b1020, #1a1446);
-      color: white;
-    }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0b1020, #1a1446);
+  color: white;
+}
 
-    /* NAVBAR */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 64px;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
-      display: flex;
-      align-items: center;
-      padding: 0 28px;
-      z-index: 1000;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    }
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
 
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 600;
-      font-size: 15px;
-    }
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 15px;
+}
 
-    .nav-img {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      overflow: hidden;
-    }
+.nav-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+}
 
-    .nav-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.nav-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .nav-right {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      font-size: 14px;
-    }
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 14px;
+}
 
-    .nav-right a {
-      color: #c7d2fe;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
+.nav-right a {
+  color: #c7d2fe;
+  text-decoration: none;
+}
 
-    .nav-right a:hover {
-      color: #60a5fa;
-    }
+.nav-right a:hover {
+  color: #60a5fa;
+}
 
-    /* MAIN CONTENT */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 110px 20px 40px;
-    }
+/* PAGE CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 110px 20px 40px;
+}
 
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 0.84fr 1fr;
-      gap: 24px;
-    }
+h1 {
+  text-align: center;
+  margin-bottom: 8px;
+}
 
-    .column {
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      gap: 24px;
-    }
+.subtitle {
+  text-align: center;
+  color: #c7d2fe;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
 
-    /* GLASS CARDS */
-    .card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(12px);
-      border-radius: 18px;
-      padding: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border: 2px solid transparent;
-      transition: transform 0.2s ease, box-shadow 0.3s ease, border 0.3s ease;
-    }
+/* CARD */
+.about-card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  border: 2px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-      border: 2px solid #8b5cf6;
-      box-shadow: 0 0 20px #8b5cf6, 0 15px 35px rgba(0,0,0,0.5);
-    }
+.about-card:hover {
+  transform: translateY(-6px);
+  border: 2px solid #8b5cf6;
+  box-shadow: 0 0 18px #8b5cf6;
+}
 
-    .card h2 {
-      margin: 0 0 6px;
-      font-size: 18px;
-      color: #ffffff;
-    }
+/* SECTIONS */
+.section {
+  margin-bottom: 28px;
+}
 
-    .card h1 {
-      margin: 4px 0;
-    }
+.section-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
 
-    .card-link {
-      margin-top: 4px;
-      font-size: 13px;
-      color: #a78bfa;
-      text-decoration: none;
-    }
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: #8b5cf6;
+  margin: 6px 0 12px;
+  border-radius: 2px;
+}
 
-    /* CENTER CARD */
-    .center-card {
-      text-align: center;
-    }
+.section-text {
+  font-size: 14px;
+  color: #c7d2fe;
+  line-height: 1.6;
+}
 
-    .profile-img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      margin: 0 auto 10px;
-      overflow: hidden;
-      border: 4px solid #8b5cf6;
-    }
+/* LIST */
+.section-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 13px;
+  color: #e5e7eb;
+}
 
-    .profile-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.section-list li {
+  margin-bottom: 6px;
+}
 
-    .small {
-      font-size: 13px;
-      color: #c7d2fe;
-      line-height: 1.15;
-      margin: 4px 0;
-    }
+/* SKILLS TAGS */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    .btn {
-      margin-top: 10px;
-      padding: 10px 22px;
-      background: #6366f1;
-      border-radius: 12px;
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      display: inline-block;
-    }
+.tag {
+  padding: 6px 14px;
+  background: rgba(59,130,246,0.9);
+  border-radius: 999px;
+  font-size: 13px;
+}
 
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      margin-top: 12px;
-    }
+/* BUTTONS */
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
 
-    .social-icons a {
-      color: white;
-      font-size: 20px;
-    }
+.btn {
+  padding: 10px 22px;
+  background: #3b82f6;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-    @media (max-width: 900px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-  </style>
+.btn.secondary {
+  background: rgba(255,255,255,0.18);
+}
+
+/* ===================== */
+/* RESPONSIVE NAVBAR FOR MOBILE */
+/* ===================== */
+@media (max-width: 600px) {
+  .navbar {
+    height: 50px;
+    padding: 0 14px;
+  }
+
+  .nav-left {
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .nav-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-right {
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 80px 12px 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    margin-bottom: 28px;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -198,7 +233,6 @@
 
   <div class="nav-right">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
     <a href="core-skills.html">Core Skills</a>
     <a href="certifications.html">Certifications</a>
     <a href="education.html">Education</a>
@@ -208,80 +242,68 @@
 
 <!-- CONTENT -->
 <div class="container">
-  <div class="grid">
+  <h1>About Me</h1>
+  <p class="subtitle">Turning raw data into insights that drive decisions</p>
 
-    <!-- LEFT COLUMN -->
-    <div class="column">
-      <div class="card">
-        <h2>About</h2>
-        <p class="small">Data excites me. Patterns inspire me. Insights drive me.</p>
-        <a href="about.html" class="card-link">Read My Full Story →</a>
-      </div>
+  <div class="about-card">
 
-      <div class="card">
-        <h2>Projects</h2>
-        <p class="small">
-          • Revenue Driver Analysis<br>
-          • Power BI Sales Dashboard<br>
-          • SQL Customer Segmentation
-        </p>
-        <a href="#" class="card-link">See all my projects →</a>
-      </div>
-
-      <div class="card">
-        <h2>Certifications</h2>
-        <p class="small">Excel • SQL • Power BI • Tableau</p>
-        <a href="certifications.html" class="card-link">View certifications →</a>
-      </div>
-    </div>
-
-    <!-- CENTER -->
-    <div class="card center-card">
-      <div class="profile-img">
-        <img src="My_IMG.jpg" alt="Profile">
-      </div>
-
-      <h1>Tumelo Mphiwe</h1>
-
-      <p class="small">
-        Data Analyst | Passionate about driving decisions with<br>
-        Business Intelligence
+    <div class="section">
+      <div class="section-title">Who I Am</div>
+      <div class="section-divider"></div>
+      <p class="section-text">
+        While studying Information Technology, I discovered that my favorite part wasn’t just building systems —
+        it was analyzing the data behind them. That curiosity led me into data analytics, where I now focus on
+        understanding trends, performance drivers, and business outcomes.
       </p>
+    </div>
 
-      <a class="btn" href="contact.html">Contact Me</a>
+    <div class="section">
+      <div class="section-title">My Journey</div>
+      <div class="section-divider"></div>
+      <p class="section-text">
+        My journey into data analytics began through academic training and hands-on projects where I developed
+        analytical thinking, problem-solving skills, and a strong interest in working with data.
+        I enjoy exploring datasets, identifying patterns, and translating numbers into clear insights.
+      </p>
+    </div>
 
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fas fa-envelope"></i></a>
+    <div class="section">
+      <div class="section-title">What I Do</div>
+      <div class="section-divider"></div>
+      <ul class="section-list">
+        <li>✔ Analyze datasets to identify trends and performance drivers</li>
+        <li>✔ Clean and prepare data for analysis and reporting</li>
+        <li>✔ Build dashboards and reports using Power BI and Excel</li>
+        <li>✔ Use SQL to extract and transform structured data</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Tools & Skills</div>
+      <div class="section-divider"></div>
+      <div class="tags">
+        <span class="tag">SQL</span>
+        <span class="tag">Excel</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Business Intelligence</span>
       </div>
     </div>
 
-    <!-- RIGHT COLUMN -->
-    <div class="column">
-      <div class="card">
-        <h2>Skills</h2>
-        <p class="small">
-          SQL • Excel • Power BI<br>
-          Tableau • Data Analysis
-        </p>
-        <a href="core-skills.html" class="card-link">See full skillsets →</a>
-      </div>
+    <div class="section">
+      <div class="section-title">Career Direction</div>
+      <div class="section-divider"></div>
+      <p class="section-text">
+        I’m seeking opportunities as a Data Analyst where I can contribute analytical value, grow my technical
+        expertise, and support organizations in making data-driven decisions.
+      </p>
+    </div>
 
-      <div class="card">
-        <h2>Education</h2>
-        <p class="small">
-          Diploma – Central University of Technology<br>
-          NQF 4 IT & Computer Science – Tshwane South TVET College
-        </p>
-        <a href="education.html" class="card-link">View details →</a>
-      </div>
-
-      <div class="card">
-        <h2>Resume</h2>
-        <p class="small">Download my professional resume</p>
-        <a href="tumelo-excel-data-analytics.pdf" class="card-link">View resume →</a>
-      </div>
+    <div class="actions">
+      <a href="index.html#projects" class="btn">View Projects</a>
+      <a href="tumelo-excel-data-analytics.pdf" class="btn secondary" download>Download Resume</a>
+      <a href="contact.html" class="btn secondary">Contact Me</a>
     </div>
 
   </div>
@@ -289,10 +311,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
