@@ -64,10 +64,19 @@ body {
 .nav-right a {
   color: #c7d2fe;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .nav-right a:hover {
   color: #60a5fa;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #c7d2fe;
 }
 
 /* ================= CENTER PAGE ================= */
@@ -161,7 +170,31 @@ body {
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-right {
+    position: fixed;
+    top: 64px;
+    right: -100%;
+    flex-direction: column;
+    background: #0f172a;
+    width: 200px;
+    height: calc(100% - 64px);
+    padding-top: 20px;
+    gap: 15px;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.4);
+    z-index: 999;
+  }
+
+  .nav-right.active {
+    right: 0;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -169,6 +202,10 @@ body {
   .contact-form input,
   .contact-form textarea {
     width: 100%;
+  }
+
+  .contact-wrapper {
+    padding: 90px 12px 20px;
   }
 }
 </style>
@@ -185,7 +222,11 @@ body {
     Tumelo Mphiwe
   </div>
 
-  <div class="nav-right">
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div class="nav-right" id="nav-menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="core-skills.html">Core Skills</a>
@@ -229,7 +270,6 @@ body {
       <h1>Contact Me</h1>
       <p>Let’s turn data into decisions</p>
 
-      <!-- ✅ CONNECTED FORM -->
       <form class="contact-form" action="https://formsubmit.co/IvenTumelo1@gmail.com" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
@@ -246,7 +286,14 @@ body {
   </div>
 </div>
 
+<script>
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('active');
+}
+</script>
+
 </body>
 </html>
+
 
 
