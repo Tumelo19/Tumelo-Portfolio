@@ -76,7 +76,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 20px 60px; /* space for navbar */
+  padding: 120px 20px 60px;
 }
 
 /* ================= GRID ================= */
@@ -107,10 +107,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 25px;
-}
-
-.left-stack .card {
-  flex: 1;
 }
 
 /* ================= CENTER CARD ================= */
@@ -164,24 +160,10 @@ body {
   background: #584cff;
 }
 
-/* ================= TEXT ================= */
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 14px;
-  opacity: 0.85;
-}
-
 /* ================= MOBILE ================= */
 @media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
-  }
-
-  .left-stack .card {
-    flex: unset;
   }
 
   .contact-form input,
@@ -206,10 +188,10 @@ body {
   <div class="nav-right">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="skills.html">Core Skills</a>
+    <a href="core-skills.html">Core Skills</a>
     <a href="certifications.html">Certifications</a>
-    <a href="index.html#projects">Projects</a>
-    <a href="index.html#education">Education</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
   </div>
 </div>
 
@@ -247,10 +229,16 @@ body {
       <h1>Contact Me</h1>
       <p>Let’s turn data into decisions</p>
 
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message"></textarea>
+      <!-- ✅ CONNECTED FORM -->
+      <form class="contact-form" action="https://formsubmit.co/IvenTumelo1@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <!-- Optional settings -->
+        <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+        <input type="hidden" name="_captcha" value="false">
+
         <button type="submit">Send Message</button>
       </form>
     </div>
@@ -260,4 +248,5 @@ body {
 
 </body>
 </html>
+
 
