@@ -77,6 +77,7 @@
       display: none;
       font-size: 22px;
       cursor: pointer;
+      color: #c7d2fe;
     }
 
     @media (max-width: 768px) {
@@ -85,12 +86,15 @@
         top: 64px;
         right: -100%;
         flex-direction: column;
-        background: rgba(15, 23, 42, 0.95);
+        background: rgba(15, 23, 42, 0.95); /* same as navbar */
+        backdrop-filter: blur(10px);          /* same blur */
         width: 200px;
         height: calc(100% - 64px);
         padding-top: 20px;
         gap: 15px;
         transition: right 0.3s ease;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.4);
+        z-index: 999; 
       }
 
       .nav-right.active {
@@ -329,3 +333,4 @@
 
 </body>
 </html>
+
