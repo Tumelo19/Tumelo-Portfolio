@@ -23,7 +23,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: #0f172a; /* solid same as menu now */
+      background: #0f172a;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -64,14 +64,13 @@
     .nav-right a {
       color: #c7d2fe;
       text-decoration: none;
-      transition: color 0.2s ease;
     }
 
     .nav-right a:hover {
       color: #60a5fa;
     }
 
-    /* HAMBURGER MENU */
+    /* HAMBURGER */
     .hamburger {
       display: none;
       font-size: 22px;
@@ -85,14 +84,13 @@
         top: 64px;
         right: -100%;
         flex-direction: column;
-        background: #0f172a; /* solid same as navbar */
+        background: #0f172a;
         width: 200px;
         height: calc(100% - 64px);
         padding-top: 20px;
         gap: 15px;
         transition: right 0.3s ease;
         box-shadow: -4px 0 20px rgba(0,0,0,0.4);
-        z-index: 999; 
       }
 
       .nav-right.active {
@@ -104,14 +102,14 @@
       }
     }
 
-    /* MAIN CONTENT */
+    /* CONTENT */
     .container {
       max-width: 1200px;
       margin: auto;
       padding: 110px 20px 40px;
     }
 
-    /* GRID */
+    /* GRID DESKTOP */
     .grid {
       display: grid;
       grid-template-columns: 1fr 0.84fr 1fr;
@@ -124,7 +122,7 @@
       gap: 24px;
     }
 
-    /* GLASS CARDS */
+    /* CARD */
     .card {
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(12px);
@@ -134,7 +132,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border: 2px solid transparent;
       transition: transform 0.2s ease, box-shadow 0.3s ease, border 0.3s ease;
     }
 
@@ -147,15 +144,9 @@
     .card h2 {
       margin: 0 0 6px;
       font-size: 18px;
-      color: #ffffff;
-    }
-
-    .card h1 {
-      margin: 4px 0;
     }
 
     .card-link {
-      margin-top: 4px;
       font-size: 13px;
       color: #a78bfa;
       text-decoration: none;
@@ -184,8 +175,7 @@
     .small {
       font-size: 13px;
       color: #c7d2fe;
-      line-height: 1.15;
-      margin: 4px 0;
+      line-height: 1.2;
     }
 
     .btn {
@@ -211,8 +201,16 @@
       font-size: 20px;
     }
 
+    /* 📱 MOBILE REORDER */
     @media (max-width: 900px) {
-      .grid { grid-template-columns: 1fr; }
+      .grid {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-profile { order: 1; }
+      .left-col { order: 2; }
+      .right-col { order: 3; }
     }
   </style>
 </head>
@@ -235,7 +233,7 @@
   <div class="nav-right" id="nav-menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-     <a href="projects.html">Projects</a>
+    <a href="projects.html">Projects</a>
     <a href="core-skills.html">Core Skills</a>
     <a href="certifications.html">Certifications</a>
     <a href="education.html">Education</a>
@@ -248,7 +246,7 @@
   <div class="grid">
 
     <!-- LEFT COLUMN -->
-    <div class="column">
+    <div class="column left-col">
       <div class="card">
         <h2>About</h2>
         <p class="small">Data excites me. Patterns inspire me. Insights drive me.</p>
@@ -257,10 +255,8 @@
 
       <div class="card">
         <h2>Projects</h2>
-        <p class="small">
-          • Ecommerce Revenue Performance Analysis<br>
-        </p>
-          <a href="projects.html" class="card-link">See all my projects →</a>
+        <p class="small">• Ecommerce Revenue Performance Analysis</p>
+        <a href="projects.html" class="card-link">See all my projects →</a>
       </div>
 
       <div class="card">
@@ -271,17 +267,13 @@
     </div>
 
     <!-- CENTER -->
-    <div class="card center-card">
+    <div class="card center-card main-profile">
       <div class="profile-img">
         <img src="My_IMG.jpg" alt="Profile">
       </div>
 
       <h1>Tumelo Mphiwe</h1>
-
-      <p class="small">
-        Data Analyst | Passionate about driving decisions with<br>
-        Business Intelligence
-      </p>
+      <p class="small">Data Analyst | Business Intelligence Enthusiast</p>
 
       <a class="btn" href="contact.html">Contact Me</a>
 
@@ -293,22 +285,16 @@
     </div>
 
     <!-- RIGHT COLUMN -->
-    <div class="column">
+    <div class="column right-col">
       <div class="card">
         <h2>Skills</h2>
-        <p class="small">
-          SQL • Excel • Power BI<br>
-          Tableau • Data Analysis
-        </p>
+        <p class="small">SQL • Excel • Power BI • Tableau</p>
         <a href="core-skills.html" class="card-link">See full skillsets →</a>
       </div>
 
       <div class="card">
         <h2>Education</h2>
-        <p class="small">
-          Diploma – Central University of Technology<br>
-          NQF 4 IT & Computer Science – Tshwane South TVET College
-        </p>
+        <p class="small">Diploma – CUT<br>NQF 4 IT – TSC</p>
         <a href="education.html" class="card-link">View details →</a>
       </div>
 
@@ -330,4 +316,5 @@
 
 </body>
 </html>
+
 
