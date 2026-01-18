@@ -119,6 +119,13 @@ h1 {
   box-shadow: 0 0 18px #8b5cf6;
 }
 
+.project-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
 .project-title {
   font-size: 18px;
   font-weight: 600;
@@ -152,6 +159,7 @@ h1 {
   background: #7c3aed;
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -207,28 +215,31 @@ h1 {
 <div class="container">
   <h1>Project Case Studies</h1>
   <p class="subtitle">Real-world analytics & software projects</p>
-<div class="project-card">
-  <img src="brightwave-logo.png" alt="BrightWave Retailers Logo" class="project-logo">
-
-  <div class="project-title">
-    Ecommerce Revenue Performance Analysis | BrightWave Retailers
-  </div>
-
-  <div class="project-desc">
-    A business intelligence case study analysing ecommerce and store revenue drivers across multiple locations, products, and customer segments to support data-driven decision-making.
-  </div>
-
-  <div class="project-tags">
-    Data Analysis • Business Intelligence • Revenue Analysis
-  </div>
-
-  <div class="project-links">
-    <a href="#">View on GitHub</a>
-  </div>
-</div>
 
   <div class="projects-grid">
 
+    <!-- BrightWave Project -->
+    <div class="project-card">
+      <img src="brightwave-logo.png" alt="BrightWave Retailers Logo" class="project-logo">
+
+      <div class="project-title">
+        Ecommerce Revenue Performance Analysis | BrightWave Retailers
+      </div>
+
+      <div class="project-desc">
+        A business intelligence case study analysing ecommerce and store revenue drivers across multiple locations, products, and customer segments to support data-driven decision-making.
+      </div>
+
+      <div class="project-tags">
+        Data Analysis • Business Intelligence • Revenue Analysis
+      </div>
+
+      <div class="project-links">
+        <a href="#">View on GitHub</a>
+      </div>
+    </div>
+
+    <!-- Existing Projects -->
     <div class="project-card">
       <div class="project-title">Customer Churn Prediction</div>
       <div class="project-desc">
