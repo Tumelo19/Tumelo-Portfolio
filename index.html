@@ -70,7 +70,6 @@
       color: #60a5fa;
     }
 
-    /* HAMBURGER */
     .hamburger {
       display: none;
       font-size: 22px;
@@ -109,7 +108,7 @@
       padding: 110px 20px 40px;
     }
 
-    /* GRID DESKTOP */
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: 1fr 0.84fr 1fr;
@@ -146,13 +145,17 @@
       font-size: 18px;
     }
 
+    .card h1 {
+      margin: 4px 0;
+    }
+
     .card-link {
+      margin-top: 4px;
       font-size: 13px;
       color: #a78bfa;
       text-decoration: none;
     }
 
-    /* CENTER CARD */
     .center-card {
       text-align: center;
     }
@@ -175,7 +178,8 @@
     .small {
       font-size: 13px;
       color: #c7d2fe;
-      line-height: 1.2;
+      line-height: 1.15;
+      margin: 4px 0;
     }
 
     .btn {
@@ -201,7 +205,7 @@
       font-size: 20px;
     }
 
-    /* 📱 MOBILE REORDER */
+    /* 📱 MOBILE ORDER ONLY */
     @media (max-width: 900px) {
       .grid {
         display: flex;
@@ -255,7 +259,9 @@
 
       <div class="card">
         <h2>Projects</h2>
-        <p class="small">• Ecommerce Revenue Performance Analysis</p>
+        <p class="small">
+          • Ecommerce Revenue Performance Analysis<br>
+        </p>
         <a href="projects.html" class="card-link">See all my projects →</a>
       </div>
 
@@ -273,7 +279,11 @@
       </div>
 
       <h1>Tumelo Mphiwe</h1>
-      <p class="small">Data Analyst | Business Intelligence Enthusiast</p>
+
+      <p class="small">
+        Data Analyst | Passionate about driving decisions with<br>
+        Business Intelligence
+      </p>
 
       <a class="btn" href="contact.html">Contact Me</a>
 
@@ -288,13 +298,19 @@
     <div class="column right-col">
       <div class="card">
         <h2>Skills</h2>
-        <p class="small">SQL • Excel • Power BI • Tableau</p>
+        <p class="small">
+          SQL • Excel • Power BI<br>
+          Tableau • Data Analysis
+        </p>
         <a href="core-skills.html" class="card-link">See full skillsets →</a>
       </div>
 
       <div class="card">
         <h2>Education</h2>
-        <p class="small">Diploma – CUT<br>NQF 4 IT – TSC</p>
+        <p class="small">
+          Diploma – Central University of Technology<br>
+          NQF 4 IT & Computer Science – Tshwane South TVET College
+        </p>
         <a href="education.html" class="card-link">View details →</a>
       </div>
 
