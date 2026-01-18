@@ -79,7 +79,7 @@ body {
 
 /* PAGE */
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: auto;
   padding: 110px 20px 40px;
 }
@@ -96,20 +96,22 @@ h1 {
   margin-bottom: 40px;
 }
 
-/* PROJECT GRID */
+/* PROJECT CARD */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
+  display: flex;
+  justify-content: center;
 }
 
 .project-card {
   background: rgba(255,255,255,0.12);
   backdrop-filter: blur(12px);
   border-radius: 18px;
-  padding: 22px;
+  padding: 28px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.45);
   border: 2px solid transparent;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
 }
 
@@ -120,38 +122,43 @@ h1 {
 }
 
 .project-logo {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
-  margin-bottom: 14px;
+  margin: 0 auto 16px;
+  display: block;
 }
 
 .project-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .project-desc {
   font-size: 14px;
   color: #c7d2fe;
-  line-height: 1.5;
-  margin: 10px 0 14px;
+  line-height: 1.6;
+  margin: 14px 0 18px;
 }
 
 .project-tags {
   font-size: 12px;
   color: #e5e7eb;
-  margin-bottom: 14px;
+  margin-bottom: 22px;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
 }
 
 .project-links a {
-  display: inline-block;
-  padding: 10px 16px;
+  padding: 12px 22px;
   background: #8b5cf6;
   color: white;
-  border-radius: 10px;
+  border-radius: 12px;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -214,12 +221,11 @@ h1 {
 <!-- CONTENT -->
 <div class="container">
   <h1>Project Case Studies</h1>
-  <p class="subtitle">Real-world analytics & software projects</p>
+  <p class="subtitle">Real-world analytics & business intelligence</p>
 
   <div class="projects-grid">
-
-    <!-- BrightWave Project -->
     <div class="project-card">
+
       <img src="brightwave-logo.png" alt="BrightWave Retailers Logo" class="project-logo">
 
       <div class="project-title">
@@ -237,42 +243,8 @@ h1 {
       <div class="project-links">
         <a href="#">View on GitHub</a>
       </div>
-    </div>
 
-    <!-- Existing Projects -->
-    <div class="project-card">
-      <div class="project-title">Customer Churn Prediction</div>
-      <div class="project-desc">
-        Machine learning model to identify at-risk customers and improve retention strategies.
-      </div>
-      <div class="project-tags">Python • SQL • Machine Learning</div>
-      <div class="project-links">
-        <a href="#">View on GitHub</a>
-      </div>
     </div>
-
-    <div class="project-card">
-      <div class="project-title">Sales Performance Dashboard</div>
-      <div class="project-desc">
-        Interactive Power BI dashboard analyzing revenue trends and customer behavior.
-      </div>
-      <div class="project-tags">Power BI • DAX • Excel</div>
-      <div class="project-links">
-        <a href="#">View on GitHub</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-title">SQL Business Insights</div>
-      <div class="project-desc">
-        Advanced SQL queries to extract insights from large transactional datasets.
-      </div>
-      <div class="project-tags">SQL • Data Analysis</div>
-      <div class="project-links">
-        <a href="#">View on GitHub</a>
-      </div>
-    </div>
-
   </div>
 </div>
 
@@ -284,3 +256,4 @@ function toggleMenu() {
 
 </body>
 </html>
+
